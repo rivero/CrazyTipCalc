@@ -5,9 +5,16 @@ import android.app.Activity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Chronometer;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 public class CrazyTipCalc extends Activity {
 	
@@ -24,6 +31,29 @@ public class CrazyTipCalc extends Activity {
 	EditText finalBillET;
 	
 	SeekBar tipSeekBar;
+	
+	private int[] checkListValues = new int[12];
+	
+	CheckBox friendlyCheckBox;
+	CheckBox specialsCheckBox;
+	CheckBox opinionCheckBox;
+	
+	RadioGroup availableRadioGroup;	
+	RadioButton availableBadRadio;
+	RadioButton availableOKRadio;
+	RadioButton availableGoodRadio;
+	
+	Spinner problemsSpinner;
+	
+	Button startChronometerButton;
+	Button pauseChronometerButton;
+	Button resetChronometerButton;
+	
+	Chronometer timeWaitingChronometer;
+	
+	long secondsYouWaited = 0;
+	
+	TextView timeWaitingTextView;
 	
 
 	@Override
@@ -54,6 +84,12 @@ public class CrazyTipCalc extends Activity {
 		tipSeekBar.setOnSeekBarChangeListener(tipSeekBarListener);
 		
 		billBeforeTipET.addTextChangedListener(billBeforeTipListener);
+		
+		friendlyCheckBox = (CheckBox) findViewById(R.id.friendlyCheckBox);
+		specialsCheckBox = (CheckBox) findViewById(R.id.specialsCheckBox);
+		opinionCheckBox = (CheckBox) findViewById(R.id.opinionCheckBox);
+		
+		setupIntroScheclBoxes();
 		
 	} 
 	

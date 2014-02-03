@@ -29,7 +29,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090012;
+        public static final int action_settings=0x7f090017;
         public static final int availabilityTextView=0x7f09000c;
         public static final int availableBadRadio=0x7f09000e;
         public static final int availableGoodRadio=0x7f090010;
@@ -44,8 +44,13 @@ public final class R {
         public static final int friendlyCheckBox=0x7f090009;
         public static final int introTextView=0x7f090008;
         public static final int opinionCheckBox=0x7f09000a;
+        public static final int pauseChronometerButton=0x7f090015;
         public static final int problemsSpinner=0x7f090011;
+        public static final int resetChronometerButton=0x7f090016;
         public static final int specialsCheckBox=0x7f09000b;
+        public static final int startChronometerButton=0x7f090014;
+        public static final int timeWaitingChronometer=0x7f090013;
+        public static final int timeWaitingForServiceextView=0x7f090012;
         public static final int tipEditText=0x7f090002;
         public static final int tipTextView=0x7f090003;
     }
