@@ -188,7 +188,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/timeWaitingForServiceextView"
         android:layout_toRightOf="@+id/opinionCheckBox"
-        android:text="Chronometer" />
+        android:text="0:0" />
 
     <Button
         android:id="@+id/startChronometerButton"
