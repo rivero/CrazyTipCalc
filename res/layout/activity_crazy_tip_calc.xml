@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CrazyTipCalc" >
+
+    <TextView
+        android:id="@+id/billTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/bill_text_view" />
+
+    <EditText
+        android:id="@+id/billEditText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/billTextView"
+        android:layout_alignBottom="@+id/billTextView"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/billTextView"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text="@string/bill_edit_text" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/tipEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tipTextView"
+        android:layout_alignBottom="@+id/tipTextView"
+        android:layout_alignParentRight="true"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        android:text="@string/tip_edit_text" />
+
+    <TextView
+        android:id="@+id/tipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/billEditText"
+        android:layout_alignBottom="@+id/billEditText"
+        android:layout_marginRight="19dp"
+        android:layout_toLeftOf="@+id/tipEditText"
+        android:text="@string/tip_text_view" />
+
+    <TextView
+        android:id="@+id/finalBillTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tipEditText"
+        android:layout_below="@+id/billEditText"
+        android:layout_marginTop="30dp"
+        android:text="@string/final_text_view" />
+
+    <TextView
+        android:id="@+id/changeTipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/finalBillTextView"
+        android:layout_alignLeft="@+id/billTextView"
+        android:layout_marginTop="30dp"
+        android:text="@string/tip_text_view" />
+
+    <SeekBar
+        android:id="@+id/changeTipSeekBar"
+        android:layout_width="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/tipTextView"
+        android:layout_below="@+id/changeTipTextView"
+        android:layout_marginTop="14dp"
+        android:ems="4"
+        android:progress="15" />
+
+    <EditText
+        android:id="@+id/finalBillEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tipEditText"
+        android:layout_below="@+id/finalBillTextView"
+        android:layout_marginTop="14dp"
+        android:ems="4"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/introTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/changeTipTextView"
+        android:layout_below="@+id/finalBillEditText"
+        android:layout_marginTop="18dp"
+        android:text="@string/intro_text_view" />
+
+    <CheckBox
+        android:id="@+id/friendlyCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/introTextView"
+        android:layout_below="@+id/introTextView"
+        android:text="@string/intro_friendly_text_view" />
+
+    <CheckBox
+        android:id="@+id/opinionCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/friendlyCheckBox"
+        android:layout_alignBottom="@+id/friendlyCheckBox"
+        android:layout_toRightOf="@+id/friendlyCheckBox"
+        android:text="@string/intro_opinion_text_view" />
+
+    <CheckBox
+        android:id="@+id/specialsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/opinionCheckBox"
+        android:layout_alignBottom="@+id/opinionCheckBox"
+        android:layout_toRightOf="@+id/opinionCheckBox"
+        android:text="@string/intro_specials_text_view" />
+
+    <TextView
+        android:id="@+id/availabilityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/friendlyCheckBox"
+        android:layout_centerVertical="true"
+        android:text="@string/available_text_view" />
+
+    <RadioGroup
+        android1:id="@+id/availableRadioGroup"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignLeft="@+id/availabilityTextView"
+        android1:layout_below="@+id/availabilityTextView"
+        android1:layout_marginTop="14dp"
+        android1:orientation="horizontal" >
+
+        <RadioButton
+            android1:id="@+id/availableBadRadio"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:checked="true"
+            android1:text="@string/available_bad_radiobutton" />
+
+        <RadioButton
+            android1:id="@+id/availableOKRadio"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="@string/available_ok_radiobutton" />
+
+        <RadioButton
+            android1:id="@+id/availableGoodRadio"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="@string/available_good_radiobutton" />
+    </RadioGroup>
+
+    <Spinner
+        android1:id="@+id/problemsSpinner"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignLeft="@+id/availableRadioGroup"
+        android1:layout_below="@+id/availableRadioGroup"
+        android1:layout_marginTop="19dp" 
+        android1:entries="@array/problem_solving"/>
+
+</RelativeLayout>
