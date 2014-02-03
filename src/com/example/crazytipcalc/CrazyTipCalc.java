@@ -89,7 +89,28 @@ public class CrazyTipCalc extends Activity {
 		specialsCheckBox = (CheckBox) findViewById(R.id.specialsCheckBox);
 		opinionCheckBox = (CheckBox) findViewById(R.id.opinionCheckBox);
 		
-		setupIntroScheclBoxes();
+		setupIntroCheckBoxes();
+		
+		availableRadioGroup = (RadioGroup) findViewById(R.id.availableRadioGroup);	
+		availableBadRadio = (RadioButton)  findViewById(R.id.availableBadRadio);
+		availableOKRadio = (RadioButton)  findViewById(R.id.availableOKRadio);
+		availableGoodRadio = (RadioButton)  findViewById(R.id.availableGoodRadio);
+		
+		addChangeListenerToRadios();
+		
+		problemsSpinner = (Spinner) findViewById(R.id.problemsSpinner);
+		
+		addItemSelectedListenerToSpinner();
+		
+		startChronometerButton = (Button) findViewById(R.id.startChronometerButton);
+		pauseChronometerButton = (Button) findViewById(R.id.pauseChronometerButton);
+		resetChronometerButton = (Button) findViewById(R.id.resetChronometerButton);
+		
+		setButtonOnClickListeners();
+		
+		timeWaitingChronometer = (Chronometer) findViewById(R.id.timeWaitingChronometer);
+		
+		timeWaitingTextView = (TextView) findViewById(R.id.timeWaitingForServiceextView);
 		
 	} 
 	
